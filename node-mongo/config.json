@@ -1,0 +1,4 @@
+﻿{
+    "connectionString": "mongodb://localhost/pro-managaer",
+    "secret": "Yo Yo Yo"
+}
