@@ -1,12 +1,11 @@
-body{
-    
-    background: url('../img/temp.jpg');
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
 
 .jumbotron{
-   
-   background: url('../img/temp.jpg');
+   padding: 10px;
+   margin: 0px;
+    /* background: white; */
+}
+
+body{
+    background: url('../img/temper.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
