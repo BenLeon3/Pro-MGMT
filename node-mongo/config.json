@@ -1,4 +1,4 @@
 ﻿{
-    "connectionString": "mongodb://localhost/pro-managaer",
+    "connectionString": "mongodb://localhost/pro-manager",
     "secret": "Yo Yo Yo"
 }

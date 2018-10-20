@@ -54,3 +54,11 @@ function _delete(req, res, next) {
         .then(() => res.json({}))
         .catch(err => next(err));
 }
+
+// user.associate = function(db) {
+//     user.hasMany(db.Project, {
+//       foreignKey: 'user_id' 
+//     })
+  
+// }
+
