@@ -1,0 +1,11 @@
+
+.jumbotron{
+   padding: 10px;
+   margin: 0px;
+    /* background: white; */
+}
+
+body{
+    background: url('../img/temper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import '../App/App.css' 
 import { history } from '../_helpers';
 import { alertActions } from '../_actions';
 import { PrivateRoute } from '../_components';
@@ -42,7 +42,9 @@ class App extends React.Component {
                         </Router>
                     </div>
                 </div>
+                <div className="backimg"></div>
             </div>
+            
         );
     }
 }
