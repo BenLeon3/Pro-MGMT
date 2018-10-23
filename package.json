@@ -10,6 +10,8 @@
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "file-loader": "^2.0.0",
     "history": "^4.6.3",
     "img-loader": "^3.0.0",
