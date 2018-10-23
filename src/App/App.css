@@ -3,3 +3,10 @@
     background: url('../img/temp.jpg');
     background-size: 50%;
 }
+.jumboton_back
+{
+    background: none;
+}
+.container_back{
+    background: none;
+}
