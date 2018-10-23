@@ -17,7 +17,7 @@ function createProject(newProject) {
             .then(
                 newProject => { 
                     dispatch(success());
-                    history.push('/projectPage');
+                    history.push('/projectMap');
                     dispatch(alertActions.success('New Project successful'));
                 },
                 error => {
