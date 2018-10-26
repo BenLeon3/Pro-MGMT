@@ -26,7 +26,7 @@ function createProject(req, res, next) {
 
 function getAll(req, res, next) {
     newProjectService.getAll()
-        .then(newProjects => res.json(newProjects))
+        .then(projects => res.json(projects))
         .catch(err => next(err));
 }
 

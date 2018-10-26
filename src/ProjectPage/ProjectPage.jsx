@@ -5,38 +5,63 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import '../ProjectPage/main.css';
 
-configure({ adapter: new Adapter() });
+import { connect } from 'react-redux';
+import { newProjectActions } from '../_actions';
 
-export class projectpage extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            user: {
-                firstName: '',
-                lastName: '',
-                username: '',
-                password: ''
-            },
-            submitted: false
-        };
+// configure({ adapter: new Adapter() });
 
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
+// export class projectpage extends React.Component {
+//     constructor(props) {
+//         super(props);
+
+//         this.state = {
+//             user: {
+//                 firstName: '',
+//                 lastName: '',
+//                 username: '',
+//                 password: ''
+//             },
+//             submitted: false
+//         };
+
+//         // this.handleChange = this.handleChange.bind(this);
+//         // this.handleSubmit = this.handleSubmit.bind(this);
+//     }
+
+//     handleChange(event) {
+//         const { name, value } = event.target;
+//         const { user } = this.state;
+//         this.setState({
+//             user: {
+//                 ...user,
+//                 [name]: value
+//             }
+//         });
+//     }
+class ProjectPage extends React.Component {
+    componentDidMount() {
+        this.props.dispatch(newProjectActions.getAll());
     }
 
-    handleChange(event) {
-        const { name, value } = event.target;
-        const { user } = this.state;
-        this.setState({
-            user: {
-                ...user,
-                [name]: value
-            }
-        });
+    handleDeleteUser(id) {
+        return (e) => this.props.dispatch(newProjectActions.delete(id));
     }
+
 
     render() {
+        const createProject = this.props.createProject || [];
+        const projectlist = createProject.map( project => {
+            return (
+                <tr>
+                    <td>{ project.projectName }</td>
+                    <td>{ project.description }</td>
+                    <td> {project.finishDate}</td>
+                    <td> {project.endDate}</td>
+                </tr>
+            )
+        }
+            );
         return (
             <section id='projectpage' className='hideMe backlook'>
                 <form action='' className='project-form' id='newProjectJS'>
@@ -57,7 +82,7 @@ export class projectpage extends React.Component {
                     <thead>
                         <tr className='table-headers'>
                             <th className='a'>Project Name</th>
-                            <th className='b'>Predeccesor</th>
+                            <th className='b'>Description</th>
                             <th className='e'>Duration Days</th>
                             <th className='d'>Start Date</th>
                             <th className='d'>Finish Date</th>
@@ -65,9 +90,25 @@ export class projectpage extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
+                    { projectlist }
                     </tbody>
                 </table>
             </section>
         )
     }
 }
+
+function mapStateToProps(state) {
+    
+    console.log("yo", state);
+    const { createProject } = state;
+    // const { user } = authentication;
+    return {
+        // newProject,
+        createProject: state.projects.items
+        
+    };
+}
+
+const connectedProjectPage = connect(mapStateToProps)(ProjectPage);
+export { connectedProjectPage as ProjectPage };
