@@ -1,6 +1,6 @@
 import { newProjectConstants } from '../_constants';
 
-export function projects(state = {}, action) {
+export function projects(state = {items: [], loading: false, error: '', deleting: false}, action) {
   switch (action.type) {
     case newProjectConstants.GETALL_REQUEST:
       return {
@@ -8,6 +8,7 @@ export function projects(state = {}, action) {
       };
     case newProjectConstants.GETALL_SUCCESS:
       return {
+        ...state,
         items: action.projects
       };
     case newProjectConstants.GETALL_FAILURE:

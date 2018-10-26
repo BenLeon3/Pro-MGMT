@@ -1,5 +1,7 @@
-# react-redux-registration-login-example
+*Pro-Management App
 
-React + Redux - User Registration and Login Tutorial & Example
-
-For documentation and further details go to http://jasonwatmore.com/post/2017/09/16/react-redux-user-registration-and-login-tutorial-example
+*To start app:
+    *In terminal 1, run mongod
+    *In terminal 2, run mongo
+    *In terminal 3, run `npm start` in the root
+    *In terminal 4, run `npm start` in the node-mongo folder
