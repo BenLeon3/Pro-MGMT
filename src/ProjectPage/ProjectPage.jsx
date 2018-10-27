@@ -4,6 +4,7 @@ import 'core-js/es6/set';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import '../ProjectPage/main.css';
+import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { newProjectActions } from '../_actions';
@@ -62,9 +63,10 @@ class ProjectPage extends React.Component {
             )
         }
             );
+        const { user, users } = this.props;
         return (
             <section id='projectpage' className='hideMe backlook'>
-                <form action='' className='project-form' id='newProjectJS'>
+                {/* <form action='' className='project-form' id='newProjectJS'>
                     <input className='longer-input' id='newProjectName' type='text' placeholder='New project name' required />
                     <input className='longer-input' id='newProjectPredeccesor' type='text' placeholder='New project predeccesor' required />
                     <input className='shorter-input' id='newProjectDuration' type='number' min='0' placeholder='Days' required />
@@ -77,7 +79,11 @@ class ProjectPage extends React.Component {
                         <option value='Completed'>Complete</option>
                     </select>
                     <button type='submit'>+ New Project</button>
-                </form>
+                </form> */}
+                <p className="Logoutback">
+                    <h1 className="left">Hii!</h1>
+                    <Link to="/login">Logout</Link>    
+                </p>
                 <table id='projectTable'>
                     <thead>
                         <tr className='table-headers'>

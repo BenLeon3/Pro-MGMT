@@ -9,3 +9,7 @@ body{
     background: url('../img/temper.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+.bakcolor{
+    background: #ffffffb5;
+    color: black;
+}
