@@ -81,7 +81,8 @@ class ProjectPage extends React.Component {
                     <button type='submit'>+ New Project</button>
                 </form> */}
                 <p className="Logoutback">
-                    <h1 className="left">Hii!</h1>
+                    <h1 className="left">Hello!</h1> 
+
                     <Link to="/login">Logout</Link>    
                 </p>
                 <table id='projectTable'>
@@ -89,10 +90,9 @@ class ProjectPage extends React.Component {
                         <tr className='table-headers'>
                             <th className='a'>Project Name</th>
                             <th className='b'>Description</th>
-                            <th className='e'>Duration Days</th>
-                            <th className='d'>Start Date</th>
-                            <th className='d'>Finish Date</th>
-                            <th>Status</th>
+                            <th className='e'>Finish Date</th>
+                            <th className='d'>Status</th>
+                            <th><Link to="/project">Add New Project</Link></th>
                         </tr>
                     </thead>
                     <tbody>

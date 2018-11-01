@@ -3,14 +3,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import "./HomePage.css";
 import { userActions } from '../_actions';
-import Background from '../img/temp.jpg';
 
-const styles = {
-    backgroundImage: `url(${Background})`,
-    backgroundSize: 'cover',
-    height: '100%'
 
-    };
+
 
 class HomePage extends React.Component {
     componentDidMount() {
@@ -25,7 +20,7 @@ class HomePage extends React.Component {
         const { user, users } = this.props;
         return (
             
-            <section style={ styles }>
+            
             
             <div className="col-md-6 col-md-offset-3 bakcolor">
                 <h1>Hi {user.firstName}!</h1>
@@ -57,7 +52,7 @@ class HomePage extends React.Component {
                 <p>
                     <Link to="/project">Create new Project</Link>
                 </p>
-            </div></section>
+            </div>
             
         );
     }

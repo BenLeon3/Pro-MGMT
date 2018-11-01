@@ -45,7 +45,7 @@ class LoginPage extends React.Component {
         
         return (
             <div className="container">
-                <div className="jumbotron">
+                <div className="contain1">
                     <h2>Login</h2>
                     <form name="form" onSubmit={this.handleSubmit}>
                         <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>

@@ -1,12 +1,12 @@
 
 .jumbotron{
    padding: 10px;
-   margin: 0px;
+   margin: 160px;
     /* background: white; */
 }
 
 body{
-    background: url('../img/temper.jpg') no-repeat center center fixed;
+    background: url('../img/a.png') no-repeat center center fixed;
     background-size: cover;
 }
 .bakcolor{
