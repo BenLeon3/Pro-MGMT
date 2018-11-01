@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-
+import './newprojectpage.css';
 import { newProjectActions, userActions } from '../_actions';
-
+import BodyClassName from 'react-body-classname';
 class NewProjectPage extends React.Component {
     constructor(props) {
         super(props);
@@ -46,10 +46,12 @@ class NewProjectPage extends React.Component {
     }
 
     render() {
+        
         const { creatingproject  } = this.props;
-        const { newProject, submitted } = this.state;
+        const { newProject ,submitted } = this.state;
         return (
-            <div className="col-md-6 col-md-offset-3">
+            <BodyClassName className='projectpageclass'>
+            <div className="col-md-6 col-md-offset-3 newprojectback1">
                 <h2>Start a Project</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !newProject.projectName ? ' has-error' : '')}>
@@ -82,6 +84,7 @@ class NewProjectPage extends React.Component {
                     </div>
                 </form>
             </div>
+        </BodyClassName>
         );
     }
 }
