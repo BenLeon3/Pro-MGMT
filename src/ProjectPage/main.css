@@ -44,6 +44,10 @@ h3 {
     line-height: 15.4px;
 }
 
+body.ProjectPageClass{
+    background: url('../img/Log1.png ') no-repeat center center fixed;
+    background-size: cover;
+}
 p {
     font-weight: 400;
     line-height: 20px;
@@ -92,23 +96,23 @@ td {
     padding: 15px 10px;
 }
 
-tr:not(:first-child) {
+/* tr:not(:first-child) {
     background: #1A2980;
-    /* fallback for old browsers */
+    /* fallback for old browsers 
     background: -webkit-linear-gradient(to top, #26D0CE, #1A2980);
-    /* Chrome 10-25, Safari 5.1-6 */
+    /* Chrome 10-25, Safari 5.1-6 
     background: linear-gradient(to top, #26D0CE, #1A2980);
     border-bottom: 1px solid #26D0CE;
-}
+} */
 
-tr:nth-child(even) {
-    background: #FF8008;
+/* tr:nth-child(even) {
+    /* background: #FF8008;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #FFC837, #FF8008);
+    /* background: -webkit-linear-gradient(to top, #FFC837, #FF8008);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #FFC837, #FF8008);
-    border-bottom: 1px solid #FF8008;
-}
+    /* background: linear-gradient(to top, #FFC837, #FF8008);
+    border-bottom: 1px solid #FF8008; */ 
+
 
 td input,
 th {

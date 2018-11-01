@@ -1,1 +1,17 @@
 
+body.loginPageClass{
+    background: url('../img/l.png ') no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    margin-top: 7rem;
+    padding-left:28px;
+    padding-right:1px;
+}
+.logback1{
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-bottom:30px;
+    background-color:#943737;
+    color:inherit;
+}

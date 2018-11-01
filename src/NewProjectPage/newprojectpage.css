@@ -1,0 +1,12 @@
+body.projectpageclass {
+    /* background-image: some other image */
+    background: url('../img/temp.jpg ') no-repeat center center fixed;
+    background-size: cover;
+}
+.newprojectback1{
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-bottom:30px;
+    background-color:#943737;
+    color:inherit;
+}
