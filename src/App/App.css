@@ -1,6 +1,6 @@
 .backimg{
     top: 50%;
-    background: url('../img/temp.jpg');
+    background: url('../img/temp.jpg'); 
     background-size: 50%;
 }
 .jumboton_back
@@ -10,3 +10,9 @@
 .container_back{
     background: none;
 }
+body.loginPageClass {
+    /* background-image: some other image */
+    background: url('../img/l.png ') no-repeat center center fixed;
+    background-size: cover;
+}
+

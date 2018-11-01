@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import "./LoginPage.css";
 import { userActions } from '../_actions';
-
+import BodyClassName from 'react-body-classname';
 
 
 class LoginPage extends React.Component {
@@ -44,8 +44,9 @@ class LoginPage extends React.Component {
         const { username, password, submitted } = this.state;
         
         return (
+            <BodyClassName className='loginPageClass'>
             <div className="container">
-                <div className="jumbotron">
+                <div className="jumbotron logback1 ">
                     <h2>Login</h2>
                     <form name="form" onSubmit={this.handleSubmit}>
                         <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
@@ -72,6 +73,7 @@ class LoginPage extends React.Component {
                     </form>
                 </div>
             </div>
+            </BodyClassName>
         );
     }
 }
