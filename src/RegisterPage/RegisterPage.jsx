@@ -2,7 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import "./RegisterPage.css";
+
+const mongoose = require('mongoose');
+
+
 import { userActions } from '../_actions';
+import BodyClassName from 'react-body-classname';
 
 class RegisterPage extends React.Component {
     constructor(props) {
@@ -48,6 +54,7 @@ class RegisterPage extends React.Component {
         const { registering  } = this.props;
         const { user, submitted } = this.state;
         return (
+            <BodyClassName className='registerPageClass'>
             <div className="col-md-6 col-md-offset-3">
                 <h2>Register</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
@@ -88,6 +95,7 @@ class RegisterPage extends React.Component {
                     </div>
                 </form>
             </div>
+        </BodyClassName>
         );
     }
 }
