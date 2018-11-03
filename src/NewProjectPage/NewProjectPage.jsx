@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import './newprojectpage.css';
 import { newProjectActions, userActions } from '../_actions';
 import BodyClassName from 'react-body-classname';
+const mongoose = require('mongoose');
+
 class NewProjectPage extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,7 @@ class NewProjectPage extends React.Component {
             newProject: {
                 projectName: '',
                 description: '',
-                finishDate: ''
+                finishDate: '',
             },
             submitted: false
         };
