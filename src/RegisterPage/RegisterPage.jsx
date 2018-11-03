@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 import "./RegisterPage.css";
+
+const mongoose = require('mongoose');
+
+
 import { userActions } from '../_actions';
 import BodyClassName from 'react-body-classname';
 
