@@ -8,7 +8,7 @@ import BodyClassName from 'react-body-classname';
 const styles = {
     backgroundImage: `url(${Background})`,
     backgroundSize: 'cover',
-    height: '100%'
+    height: '100%'};
 
 
 
