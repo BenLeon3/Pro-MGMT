@@ -8,8 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "heroku-postbuild": "webpack -p"
+    "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
     "enzyme": "^3.7.0",
