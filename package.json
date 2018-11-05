@@ -7,6 +7,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "build:prod": "webpack -p --env=prod",
+    "build:dev": "webpack -d --env=dev",
+    "serve": "webpack-dev-server -d --open",
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "heroku-postbuild": "npm run build"
