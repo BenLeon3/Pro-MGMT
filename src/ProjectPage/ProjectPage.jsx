@@ -45,7 +45,7 @@ class ProjectPage extends React.Component {
         this.props.dispatch(newProjectActions.getAll());
     }
 
-    handleDeleteUser(id) {
+    handleDeleteproject(id) {
         return (e) => this.props.dispatch(newProjectActions.delete(id));
     }
 
@@ -54,11 +54,30 @@ class ProjectPage extends React.Component {
         const createProject = this.props.createProject || [];
         const projectlist = createProject.map( project => {
             return (
-                <tr>
-                    <td>{ project.projectName }</td>
-                    <td>{ project.description }</td>
-                    <td> {project.finishDate}</td>
-                    <td> {project.endDate}</td>
+                <tr id='projectTable'>
+                   
+                    <Link to='/newTask'>  <td className='a'>{ project.projectName }</td>
+                            <td className='b'>{ project.description }</td>
+                            <td className='e'> {project.finishDate}</td>
+                            <td className='d'> {project.endDate}</td>
+                    </Link>
+                    {/* kevin Code deleting the project--------------------*/}
+                    {/* {Project.loading && <em>Loading users...</em>}
+                    {Project.error && <span className="text-danger">ERROR: {users.error}</span>}
+                    {Project.items &&
+                        <ul>
+                            {newProject.items.map((Project, index) =>
+                                <li key={Project.id}>
+                                    {
+                                        Project.deleting ? <em> - Deleting...</em>
+                                        : Project.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
+                                        : <span> - <a onClick={this.handleDeleteproject(id)}>Delete</a></span>
+                                    }
+                                </li>
+                            )}
+                        </ul>
+                     } */}
+                    {/*----------------------------------------- */}
                 </tr>
             )
         }
@@ -92,8 +111,7 @@ class ProjectPage extends React.Component {
                             <th className='a'>Project Name</th>
                             <th className='b'>Description</th>
                             <th className='e'>Finish Date</th>
-                            <th className='d'>Status</th>
-                            
+                            <th className='d'>status</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -88,12 +88,7 @@ table {
 }
 
 th {
-    padding: 15px 10px;
     text-align: left;
-}
-
-td {
-    padding: 15px 10px;
 }
 
 /* tr:not(:first-child) {

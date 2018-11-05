@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { newTaskActions, userActions } from '../_actions';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 // import { KanBanBoard } from '../KanBanBoard';
-
+import BodyClassName from 'react-body-classname';
+import './taskspage.css';
+// import Modal from '../Modal/Modal';
 
 class TasksPage extends React.Component {
     constructor(props) {
@@ -18,6 +20,21 @@ class TasksPage extends React.Component {
             submitted: false
         };
 
+    // Implemented Kevin Modals Code
+    
+    // openModalHandler = () => {
+	// 	this.setState({
+	// 		isShowing: true
+	// 	});
+	// }
+
+	// closeModalHandler = () => {
+	// 	this.setState({
+	// 		isShowing: false
+	// 	});
+	// }
+
+    //********************************************* */(
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -66,11 +83,14 @@ class TasksPage extends React.Component {
     render() {
         const { creatingtask } = this.props;
         const { newTask, submitted } = this.state;
+        //Kevin Added
+        // const  {Open} = this.openModalHandler;
+         
         //add to page
         const createTask = this.props.createTask || [];
         const tasklist = createTask.map( task => {
             return (
-                <tr>
+                <tr className="tr_newtask" onClick={this.onOpenModal}>
                     <td>{ task.projectTask }</td>
                     <td>{ task.createdDate }</td>
                 </tr>
@@ -78,6 +98,7 @@ class TasksPage extends React.Component {
         });
 
         return (
+            <BodyClassName className='taskPageClass'>
             <div>
                 <div className="col-md-6 col-md-offset-3">
                     <h2>Add a Task</h2>
@@ -100,6 +121,8 @@ class TasksPage extends React.Component {
                 </div>
                 <div className="col-md-6">
                     <h2>New Task</h2>
+                    <div>
+				{ this.state.isShowing ? <div onClick={this.closeModalHandler} className="back-drop"></div> : null }</div>
                     <table id='taskTable-new'>
                         <thead>
                             <tr className='table-headers'>
@@ -146,6 +169,7 @@ class TasksPage extends React.Component {
                 </div>
                 
             </div>
+            </BodyClassName>
         );
     } 
     
