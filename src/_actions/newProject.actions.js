@@ -1,6 +1,6 @@
 import { newProjectConstants } from '../_constants';
 import { newProjectService } from '../_services';
-import { alertActions } from './';
+import { alertActions } from './alert.actions';
 import { history } from '../_helpers';
 
 export const newProjectActions = {
