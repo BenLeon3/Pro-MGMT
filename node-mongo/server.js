@@ -5,6 +5,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const jwt = require('_helpers/jwt');
 const errorHandler = require('_helpers/error-handler');
+//const port = process.env.PORT || 8080;
 
 //********** */
 const mongoose = require("mongoose");
@@ -25,14 +26,14 @@ app.use('/createProject', require('./newproject/newProjects.controller'));
 app.use('/createTask', require('./projectTask/newTasks.controller'));
 
 //************* */
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/dist')); //
 
 // global error handler
 app.use(errorHandler);
 
 //************* */
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+app.get("*  ", (req, res) => {
+    res.sendFile(path.join(__dirname,"client", "build", "index.html"));//
 });
 
 //*************** */
@@ -43,7 +44,7 @@ app.get("*", (req, res) => {
 // mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // start server
-const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
+ const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
 const server = app.listen(port, function () {
     console.log('Server listening on port ' + port);
 });

@@ -42,12 +42,12 @@ class HomePage extends React.Component {
                                     {
                                         user.deleting ? <em> - Deleting...</em>
                                         : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                        : <span> - <a onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
+                                        : <span> - <a onClick={this.handleDeleteUser(.id)}>Delete</a></span>
                                     }
                                 </li>
                             )}
                         </ul>
-                    } */}
+                     }*/}
                 <p>
                     <Link to="/login">Logout</Link>    
                 </p>
@@ -63,7 +63,7 @@ class HomePage extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state) {2552
     const { users, authentication } = state;
     const { user } = authentication;
     return {

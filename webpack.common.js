@@ -52,7 +52,7 @@ module.exports = {
         //     inject: 'body'
         // })],
         plugins: [
-                 new CleanWebpackPlugin(['dist']),
+                //  new CleanWebpackPlugin(['dist']),
                  new HtmlWebpackPlugin({
                   title: 'Production',
                   template: './src/index.html',
